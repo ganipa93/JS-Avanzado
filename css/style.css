@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans Display', Calibri, Arial, sans-serif;
+}
+:root{
+	font-size: 20px;
+	--colorPrimario: rgb(182, 229, 242);
+	--colorSecundario: #6d878f;
+}
+
+/*--------------------------------------------------------*/
+/*Header*/
+header.principal{
+	height: 10vh;
+	padding: 0 4%;
+	margin-bottom: 20px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: var(--colorPrimario);
+	background-image: 
+	linear-gradient(transparent 45%, rgba(0,0,0,.1)),
+	linear-gradient(to top,transparent 45%, rgba(0,0,0,.1));
+	
+	box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
+	color: var(--colorSecundario);
+}
+
+
+header.principal nav a{
+	text-decoration: none;
+	color: inherit;
+	padding: 8px 4px;
+	border-radius: 3px;
+}
+header.principal nav a:hover{
+	background-color: rgba(255, 255, 255, .5);
+}
+
+/*--------------------------------------------------------*/
+/*Footer*/
+
+footer.principal{
+	height: 8vh;
+
+	background-color: var(--colorSecundario);
+	color: white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*--------------------------------------------------------*/
+/*Main*/
+main.principal{
+	min-height: 78vh;
+}
+/*--------------------------------------------------------*/
+/*Productos*/
+#productos{
+	height: 430px;
+	padding: 0 4%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+
+}
+
+#productos .producto{
+	width: 19%;
+	padding: 10px 15px 12px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .4);
+	background-color: var(--colorPrimario);
+	background-image: linear-gradient(rgba(255,255,255, .8), rgba(255,255,255, .6));
+	border: solid .1px var(--colorPrimario);
+	border-radius: 10px;
+
+	text-decoration: none;
+	color: black;
+}
+#productos .producto:hover{
+	outline: 8px solid var(--colorPrimario);
+	background-image: linear-gradient(rgba(255,255,255, .6), rgba(255,255,255, .4));
+
+}
+#productos .producto:hover img{
+	opacity: 1;
+}
+
+#productos .producto.active{
+	background-image: none;
+}
+
+#productos .producto img,
+#productos .producto h3,
+#productos .producto p{
+	width: 100%;
+}
+
+#productos .producto img{
+	height: 60%;
+	border-radius: 4px;
+	opacity: 0.7;
+	object-fit: cover;
+}
+
+#productos .producto p{
+	height: 35%;
+	overflow: hidden;
+}
+/*--------------------------------------------------------*/
+/*ampliarProductos*/
+
+
+#ampliarProductos{
+	display: none;
+	height: 500px;
+	margin: 20px 4% 0;
+	padding: 50px ;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .4);
+	background-color: var(--colorPrimario);
+
+	border-radius: 10px;
+	font-size: 1.1rem;
+	position: relative;
+}
+#ampliarProductos.active{
+	display: block;
+}
+
+#ampliarProductos .close{
+	display: block;
+	height: 35px;
+	width: 35px;
+
+	position: absolute;
+	top: 2%;
+	right: 1.5%;
+
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+	border: solid 2px white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#ampliarProductos .close:hover{
+	background-color: white;
+	color: var(--colorPrimario);
+}
+
+#ampliarProductos img{
+	float: left;
+	height: 100%;
+	border-radius: 4%;
+	opacity: 0.9;
+	margin-right: 25px;
+}
+#ampliarProductos h3{
+	margin-bottom: 15px;
+	font-size: 1.4em;
+}
+
+#ampliarProductos p{
+	overflow: auto;
+	height: 85%;
+}
+
+
+
+
+/*--------------------------------------------------------*/
+/*Crear Cuenta*/
+
+#crearCuenta{
+	padding: 0 4%;
+}
+
+#crearCuenta form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#crearCuenta form fieldset{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 80px;
+	grid-gap: 20px 5%;
+	text-transform: capitalize;
+
+	padding: 15px 20px 20px;
+
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+#crearCuenta form fieldset .campo{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+#crearCuenta form fieldset .campo input,
+#crearCuenta form fieldset .campo select{
+	height: 50%;
+	font-size: .9rem;
+	padding: 0 2px;
+}
+
+#crearCuenta form .submit{
+	width: 100%;
+
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#crearCuenta form .submit button{
+	font-size: 1.3rem;
+	padding: 10px 20px;
+	margin: auto;
+}
+
+/*--------------------------------------------------------*/
+/*Usuarios */
+
+#usuarios{
+	height: 78vh;
+	width: 100%;
+	padding: 0 4%;
+
+	overflow: auto;
+}
+#usuarios table{
+	width: 100% ;
+	text-align: center;
+	position: relative;
+	overflow: auto;
+	
+}
+#usuarios table thead{
+	background-color: var(--colorSecundario);
+	color: white;
+	font-weight: normal;
+	font-size: 1.1em;
+	position: sticky;
+	top: 0;
+}
+
+#usuarios table tbody tr:nth-of-type(2n){
+	background-color: var(--colorPrimario);
+}
+#usuarios table th{
+	height: 80px;
+	padding: 0 3px;
+}
+#usuarios table td{
+	height: 70px;
+	padding: 0 3px;
+	word-wrap: break-word;
+}

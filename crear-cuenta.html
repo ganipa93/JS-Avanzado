@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Proyecto Integrador</title>
+</head>
+<body>
+	<header class="principal">
+		<h1>Web</h1>
+		<nav>
+			<a href="productos.html">Productos</a>
+			|
+			<a href="crear-cuenta.html">Crear Cuenta</a>
+			|
+			<a href="usuarios.html">Usuarios</a>
+		</nav>
+	</header>
+
+	<main class="principal">
+	<section id="crearCuenta">
+		<h2>Crear Cuenta</h2>
+
+		<form>
+			<fieldset>
+				<legend>Datos Basicos</legend>
+				<div class="campo">
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" name="nombre">
+					
+				</div>
+
+				<div class="campo">
+					<label for="apellido">apellido</label>
+					<input type="text" id="apellido" name="apellido">
+					
+				</div>
+
+				<div class="campo">
+					<label for="telefono">Telefono</label>
+					<input type="number" id="telefono" name="telefono">
+					
+				</div>
+
+				<div class="campo">
+					<label for="email">email</label>
+					<input type="email" id="email" name="email">
+					
+				</div>
+				
+			</fieldset>
+
+			<fieldset>
+				<legend>Direccion</legend>
+
+				<div class="campo">
+					<label for="calle">calle</label>
+					<input type="text" id="calle" name="calle">
+					
+				</div>
+
+				<div class="campo">
+					<label for="numeracion">numeracion</label>
+					<input type="number" id="numeracion" name="numeracion">
+					
+				</div>
+
+				<div class="campo">
+					<label for="ciudad">ciudad</label>
+					<input type="text" id="ciudad" name="ciudad">
+					
+				</div>
+
+				<div class="campo">
+					<label for="CP">Codigo Postal</label>
+					<input type="text" id="CP" name="CP">
+					
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Empresa</legend>
+				
+				<div class="campo">
+					<label for="nombreEmpresa">Nombre de Empresa</label>
+					<input type="text" id="nombreEmpresa" name="nombreEmpresa">
+					
+				</div>
+
+				<div class="campo">
+					<label for="razonSocial">Razon Social</label>
+					<select name="razonSocial" id="razonSocial">
+						<option value="">Responsable Inscripto</option>
+						<option value="">IVA Excento</option>
+						<option value="">IVA Excento</option>
+					</select>
+					
+				</div>
+				
+			</fieldset>
+			<div class="submit">
+				<button type="submit">Enviar Datos</button>
+			</div>
+		</form>	
+
+	</section>		
+
+	</main>
+
+	<footer class="principal">
+		<p>Mi Web Fantastica &copy 2021 | Todos los derechos reservados</p>
+	</footer>
+
+<script src="js/index.js"></script>
+</body>
+</html>
